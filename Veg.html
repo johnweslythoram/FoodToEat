@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="ems.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="dummy1.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/edcbc2e092.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="logo1.jpg" class="logo" alt="LOGO">
+              
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" id="nav-item1">My Profile<span class="sr-only">(current)</span></a>
+                <a class="nav-link" id="nav-item2" href="#followUsSection">Follow us</a>
+                <a class="nav-link" id="nav-item3">My cart</a>
+                <a class="nav-link" id="nav-item6"  >My orders</a>
+                <a class="nav-link" id="nav-item4" >Sign Out</a>
+                <a class="nav-link" id="nav-item5" >
+                   
+                </a>
+              </div>
+            </div>
+      </div>
+      </nav>
+    <div class="ems-section pt-3 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 pb-3 d-flex">
+                    <h1 class="ems-heading">Veg Starters</h1>
+                    <button type="button" class="btn btn-white position-relative Card">
+                      <i class="fa-solid fa-cart-plus" id="cart-icon"></i>
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                        1
+                      </span>
+                    </button>
+
+                    <div class="cart">
+                        <div class="cart-title">Cart Items</div>
+                        <div class="cart-content"></div>
+                    
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">Rs.0</div>
+                      </div>
+                      <a id="nonVEG"><button class="btn btn-warning">Place Order</button></a>
+
+                    <!-- <ion-icon name="close" id="cart-close"></ion-icon>  -->
+                    <i class="fa-solid fa-xmark" id="cart-close"></i>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="ems-card shadow-lg p-3 mb-3">
+                        <img src="paneer-65.jpg" alt="Non veg starter" class="ems-img w-100">
+                        <h1 class="ems-card-heading food-title">paneer-65</h1>
+                        <div class="d-flex">
+                            <p class="m-0 p-0 food-price" style="font-weight: bolder;">Rs.160</p>
+                            <i style="margin-left: auto;padding-right:20px ;" class="fa-solid fa-cart-plus pt-1 add-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow-lg ems-card p-3 mb-3">
+                      <img
+                        src="paneer-pakora.jpg"
+                        class="ems-img w-100 food-img"
+                      />
+                      <h1 class="ems-card-heading food-title">paneer pakora</h1>
+                      <div class="d-flex">
+                        <p class="m-0 p-0 food-price" style="font-weight: bolder;">Rs.150</p>
+                        <i style="margin-left: auto;padding-right:20px ;" class="fa-solid fa-cart-plus pt-1 add-cart"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="ems-card shadow-lg p-3 mb-3">
+                      <img
+                        src="paneer-tikka.jpg"
+                        class="ems-img w-100 food-img"
+                      />
+                      <h1 class="ems-card-heading food-title">paneer tikka</h1>
+                      <div class="d-flex">
+                        <p class="m-0 p-0 food-price" style="font-weight: bolder;">Rs.170</p>
+                        <i style="margin-left: auto;padding-right:20px ;" class="fa-solid fa-cart-plus pt-1 add-cart"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="ems-card shadow p-3 mb-3">
+                      <img
+                        src="veg-seekh-kabab.jpg"
+                        class="ems-img w-100 food-img"
+                      />
+                      <h1 class="ems-card-heading food-title">veg seekh kabab</h1>
+                      <div class="d-flex">
+                        <p class="m-0 p-0 food-price" style="font-weight: bolder;">Rs.120</p>
+                        <i style="margin-left: auto;padding-right:20px ;" class="fa-solid fa-cart-plus pt-1 add-cart"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="ems-card shadow p-3 mb-3">
+                      <img
+                        src="lilva-kachori.jpg"
+                        class="ems-img w-100 food-img"
+                      />
+                      <h1 class="ems-card-heading food-title">lilva kachori</h1>
+                      <div class="d-flex">
+                        <p class="m-0 p-0 food-price" style="font-weight: bolder;">Rs.140</p>
+                        <i style="margin-left: auto;padding-right:20px ;" class="fa-solid fa-cart-plus pt-1 add-cart"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="ems-card shadow p-3 mb-3">
+                      <img
+                        src="bang-bang-cauliflower.jpg"
+                        class="ems-img w-100 food-img"
+                      />
+                      <h1 class="ems-card-heading food-title">Bang bang cauliflower</h1>
+                      <div class="d-flex">
+                        <p class="m-0 p-0 food-price" style="font-weight: bolder;">Rs.110</p>
+                        <i style="margin-left: auto;padding-right:20px ;" class="fa-solid fa-cart-plus pt-1 add-cart"></i>
+                    </div>
+                    </div>
+                </div>
+               
+        </div>
+    </div>
+    <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="follow-us-section-heading">Follow Us</h1>
+          </div>
+          <div class="col-12">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="follow-us-icon-container">
+                <i class="fab fa-twitter icon"></i>
+              </div>
+              <div class="follow-us-icon-container">
+                <i class="fab fa-instagram icon"></i>
+              </div>
+              <div class="follow-us-icon-container">
+                <i class="fab fa-facebook icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-section pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <img
+              src="logo1.jpg"
+              class="logo"
+            />
+            <h1 class="footer-section-mail-id">orderfood@foodtoeat.com</h1>
+            <p class="footer-section-address">
+              123 Ayur Vigyan Nagar, New Delhi, India.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="nonVeg.js"></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password - Food Order</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="signUp.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid vh-100 d-flex justify-content-center align-items-center bg-light">
+    <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px;">
+      <div class="text-center mb-4">
+        <h3 class="font-weight-bold text-primary">Forgot Password?</h3>
+        <p class="text-muted">Enter your email to reset your password</p>
+      </div>
+      <form id="forgotPasswordForm">
+        <div class="form-group">
+          <label for="email" class="font-weight-bold">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          <small id="emailError" class="form-text text-danger"></small>
+        </div>
+        <div id="passwordFields" style="display: none;">
+          <div class="form-group">
+            <label for="newPassword" class="font-weight-bold">New Password</label>
+            <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+            <small id="passwordStrength" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword" class="font-weight-bold">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm new password">
+            <small id="passwordError" class="form-text text-danger"></small>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Reset Link</button>
+      </form>
+      <div class="text-center mt-3">
+        <p class="mt-2">Remembered your password? <a href="SignIn.html" class="text-primary">Sign In</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- Password Reset Success Modal -->
+<div class="modal fade" id="resetSuccessModal" tabindex="-1" role="dialog" aria-labelledby="resetSuccessModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resetSuccessModalLabel">Password Changed Successfully</h5>
+      </div>
+      <div class="modal-body">
+        Your password has been successfully reset. You will be redirected to the sign-in page.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    function getUsers() {
+      const users = localStorage.getItem("users");
+      return users ? JSON.parse(users) : [];
+    }
+
+    function checkPasswordStrength(password) {
+      let strength = 0;
+
+      if (password.length >= 8) strength += 1; // Minimum length of 8 characters
+      if (/[A-Z]/.test(password)) strength += 1; // Contains at least one uppercase letter
+      if (/[a-z]/.test(password)) strength += 1; // Contains at least one lowercase letter
+      if (/[0-9]/.test(password)) strength += 1; // Contains at least one digit
+      if (/[\W_]/.test(password)) strength += 1; // Contains at least one special character
+
+      switch (strength) {
+        case 0:
+        case 1:
+          return "Very Weak";
+        case 2:
+          return "Weak";
+        case 3:
+          return "Moderate";
+        case 4:
+          return "Strong";
+        case 5:
+          return "Very Strong";
+        default:
+          return "Very Weak";
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+      const emailInput = document.getElementById('email');
+      const emailError = document.getElementById('emailError');
+      const passwordFields = document.getElementById('passwordFields');
+      const newPasswordInput = document.getElementById('newPassword');
+      const confirmPasswordInput = document.getElementById('confirmPassword');
+      const passwordError = document.getElementById('passwordError');
+      const passwordStrengthText = document.getElementById('passwordStrength');
+
+      forgotPasswordForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Reset previous errors
+        emailError.textContent = '';
+        passwordError.textContent = '';
+        passwordStrengthText.textContent = '';
+
+        const email = emailInput.value.trim();
+        const users = getUsers();
+
+        // Check if email exists in local storage
+        const userExists = users.some(user => user.email === email);
+
+        if (!userExists) {
+          emailError.textContent = 'Email does not exists.';
+        } else {
+          // If user does not exist, show password input fields and disable email input
+          passwordFields.style.display = 'block';
+          emailInput.setAttribute('disabled', true); // Disable the email input
+
+          const newPassword = newPasswordInput.value.trim();
+          const confirmPassword = confirmPasswordInput.value.trim();
+
+          // Check if passwords are not empty
+          if (newPassword === '' || confirmPassword === '') {
+            passwordError.textContent = "Password fields cannot be empty.";
+            return;
+          }
+
+          // Check the password strength
+          const strength = checkPasswordStrength(newPassword);
+          passwordStrengthText.textContent = `Password Strength: ${strength}`;
+
+          if (strength !== 'Very Strong') {
+            passwordError.textContent = "Password must be 'Very Strong'.";
+          } else if (newPassword !== confirmPassword) {
+            passwordError.textContent = "Passwords do not match.";
+          } else {
+            // Update user password in local storage
+            const updatedUsers = users.map(user => {
+              if (user.email === email) {
+                user.password = newPassword; // Update password
+              }
+              return user;
+            });
+            localStorage.setItem("users", JSON.stringify(updatedUsers));
+            $('#resetSuccessModal').modal('show');
+            setTimeout(() => {
+          window.location.href = 'signIN.html';
+        }, 5000);
+          }
+        }
+      });
+
+      // Check password strength dynamically
+      newPasswordInput.addEventListener('input', () => {
+        const strength = checkPasswordStrength(newPasswordInput.value.trim());
+        passwordStrengthText.textContent = `Password Strength: ${strength}`;
+      });
+    });
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

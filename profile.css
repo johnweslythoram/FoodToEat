@@ -1,0 +1,121 @@
+body {
+    background-color: #f2f5f9;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-weight: 600;
+    color: #3a3a3a;
+    letter-spacing: 1px;
+}
+
+h4, h5 {
+    font-weight: 500;
+    color: #444;
+}
+
+.profile-header {
+    padding: 30px 0;
+    background: linear-gradient(135deg, #6f86d6, #48c6ef);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card.custom-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.btn.custom-btn {
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn.custom-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary.custom-btn {
+    background-color: #6f86d6;
+    border: none;
+}
+
+.btn-primary.custom-btn:hover {
+    background-color: #5b72b3;
+}
+
+.btn-success.custom-btn {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success.custom-btn:hover {
+    background-color: #218838;
+}
+
+.btn-secondary.custom-btn {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-secondary.custom-btn:hover {
+    background-color: #5a6268;
+}
+
+.form-control.custom-input {
+    border-radius: 30px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease;
+}
+
+.form-control.custom-input:focus {
+    border-color: #6f86d6;
+    box-shadow: 0 0 5px rgba(111, 134, 214, 0.4);
+}
+
+#personal-details p, #address-list p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.address-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.address-item:last-child {
+    border-bottom: none;
+}
+
+.remove-btn {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}

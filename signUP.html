@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Food Order</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="signUp.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="row justify-content-center w-100">
+      <!-- Adjusted column classes for better responsiveness -->
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+        <div class="card shadow-lg p-4">
+          <div class="text-center mb-4">
+            <h3 class="font-weight-bold text-primary">Create an Account</h3>
+            <p class="text-muted">Sign up to start ordering your favorite meals</p>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="fullNameSignup" class="font-weight-bold">Full Name</label>
+              <input type="text" class="form-control" id="fullNameSignup" placeholder="Enter your full name" required>
+              <p class="m-0 p-0 text-danger" id="alert1"></p>
+            </div>
+            <div class="form-group">
+              <label for="emailSignup" class="font-weight-bold">Email address</label>
+              <input type="email" class="form-control" id="emailSignup" placeholder="Enter your email" required>
+              <p class="m-0 p-0 text-danger" id="alert2"></p>
+            </div>
+            <div class="form-group">
+              <label for="passwordSignup" class="font-weight-bold">Password</label>
+              <input type="password" class="form-control" id="passwordSignup" placeholder="Enter your password" required>
+              <p class="m-0 p-0 text-danger" id="alert3"></p>
+            </div>
+            <div class="form-group">
+              <label for="confirmPasswordSignup" class="font-weight-bold">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPasswordSignup" placeholder="Confirm your password" required>
+              <p class="m-0 p-0 text-danger" id="alert4"></p>
+            </div>
+            <button type="submit" id="submitSignup" class="btn btn-primary btn-block">Sign Up</button>
+          </form>
+          <div class="text-center mt-3">
+            <p>Already have an account? <a href="SignIn.html" class="text-primary">Sign In</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <h2 id="Modal"></h2>
+      <p>We are glad to see you!</p>
+    </div>
+  </div>
+  <script src="signUP.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

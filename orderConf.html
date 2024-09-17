@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="orderConf.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Order Confirmed</h1>
+        <div class="row">
+            <!-- Order Summary Section -->
+            <div class="col-lg-8">
+                <div class="card shadow-lg">
+                    <div class="card-header">
+                        <h5>Order Summary</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Thank you for your order, <span id="username"></span>!</p>
+                        <p>Your order has been placed successfully and is being processed.</p>
+                        <p>Your Order ID: <span id="order-id">#123456</span></p>
+                        <div id="order-items">
+                            <!-- Order Items will be dynamically added here by JavaScript -->
+                        </div>
+                        <div class="mt-4">
+                            <p><strong>Total Items:</strong> <span id="total-items">0</span></p>
+                            <p><strong>Total Price:</strong> <span id="total-price">Rs.0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional Information Section -->
+            <div class="col-lg-4">
+                <div class="card shadow-lg">
+                    <div class="card-header">
+                        <h5>Order Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Delivery Address:</strong></p>
+                        <p id="delivery-address">123 Street Name, City, Country</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a id="myorders" class="btn btn-primary">Continue Shopping</a>
+        </div>
+    </div>
+    <script src="orderConf.js"></script>
+</body>
+
+</html>

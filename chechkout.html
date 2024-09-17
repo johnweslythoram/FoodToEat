@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Flipkart Style</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Checkout</h2>
+        <div class="row">
+            <!-- Left Column: Order Summary and Address -->
+            <div class="col-lg-8">
+                <!-- Order Summary -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Order Summary</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="order-summary"></div>
+                    </div>
+                </div>
+
+                <!-- Delivery Address -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Delivery Address</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="address-list" class="">
+                            <!-- Existing addresses will be populated here -->
+                        </div>
+                        <button class="btn btn-link " id="add-address-btn">+ Add a new address</button>
+
+                        <!-- Address Form (Initially hidden) -->
+                        <div id="address-form" class="d-none">
+                            <h6>Add New Address</h6>
+                            <form id="address-form-body">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="street">Street</label>
+                                    <input type="text" class="form-control" id="street" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" id="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <input type="text" class="form-control" id="country" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postal-code">Postal Code</label>
+                                    <input type="text" class="form-control" id="postal-code" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Address</button>
+                                <button type="button" class="btn btn-secondary ml-2" id="cancel-address-btn">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Price Details -->
+            <div class="col-lg-4">
+                <!-- Order Summary with Total -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Price Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <p>Subtotal</p>
+                            <p id="subtotal">Rs. 0</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>GST (18%)</p>
+                            <p id="gst">Rs. 0</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <h6>Total Amount</h6>
+                            <h6 id="total-amount">Rs. 0</h6>
+                        </div>
+                        <button id="place-order-btn" class="btn btn-primary btn-block mt-3" disabled>Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animation Modal -->
+    <div id="order-success-modal" class="modal">
+        <div class="modal-content">
+            <div class="checkmark-circle">
+                <div class="checkmark"></div>
+            </div>
+            <h3>Order Successfully Placed!</h3>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

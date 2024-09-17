@@ -1,0 +1,25 @@
+.wcu-section {
+    background-color: #f9fbfe;
+  }
+  
+.wsu-heading{
+    font-family: "Robot";
+    font-weight: 700;
+    font-size: 28px;
+    color: #183b56;
+}
+
+.wsu-text{
+    font-family: "Robot";
+    font-size: 16px;
+    color: #5a7184;
+}
+
+.wcu-card{
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5eaf4;
+    border-radius: 16px;
+}

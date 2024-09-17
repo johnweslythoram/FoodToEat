@@ -1,0 +1,44 @@
+.logo{
+    width: 80px;
+    height: 70px;
+}
+#nav-item1{
+    font-family:"Robot";
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#nav-item2{
+    font-family:"Robot";
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#nav-item3{
+    font-family:"Robot";
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#nav-item6{
+  font-family:"Robot";
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#nav-item5{
+  font-family:"Robot";
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+#nav-item4{
+    font-family:"Robot";
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.navbar-nav{
+    margin-left: auto;
+}

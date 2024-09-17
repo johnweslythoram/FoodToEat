@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="myCart.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">My Cart</h1>
+        <div class="row">
+            <!-- Cart Items Section -->
+            <div class="col-lg-8">
+                <div id="cart-items">
+                    <!-- Cart Item Template -->
+                    <!-- Items will be dynamically added here by JavaScript -->
+                </div>
+            </div>
+            <!-- Price Summary Section -->
+            <div class="col-lg-4">
+                <div class="card shadow-lg">
+                    <div class="card-header">
+                        <h5>Price Summary</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Total Items: <span id="total-items">0</span></p>
+                        <p>Total Price: <span id="total-price">Rs.0</span></p>
+                        <button id="CheckOut" class="btn btn-warning btn-block">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="myCart.js"></script>
+</body>
+</html>

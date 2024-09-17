@@ -1,0 +1,77 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .card {
+    border-radius: 15px;
+  }
+  
+  .btn-primary {
+    background-color: #ff5e62;
+    border-color: #ff5e62;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff9966;
+    border-color: #ff9966;
+  }
+  
+  .text-primary {
+    color: #ff5e62 !important;
+  }
+  
+  .form-control:focus {
+    border-color: #ff5e62;
+    box-shadow: 0 0 0 0.2rem rgba(255, 94, 98, 0.25);
+  }
+  
+  /* Modal Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 1s, slideDown 1s; /* Fade-in and Slide-down animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); }
+  to { transform: translateY(0); }
+}
+
+/* Welcome message text styling */
+.modal-content h2 {
+  color: #ff4081; /* Pinkish color */
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.modal-content p {
+  color: #4caf50; /* Green color */
+  font-size: 1.2rem;
+}
